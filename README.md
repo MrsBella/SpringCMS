@@ -18,3 +18,28 @@
    * id
    * firstName
    * lastName
+
+## Zadanie 3
+
+   1. Utwórz encję `Article`,
+   
+   2. Encja ma zawierać następujące pola:
+
+   * id
+   * title (max. 200 znaków),
+   * author - (powiązanie relacją do klasy `Author`) - artykuł może mieć tylko jednego autora
+   * categories - (powiązanie relacją do klasy `Category`) - artykuł może należeć do wielu kategorii
+   * content
+   * created (wartość ma być automatycznie dodawana podczas zapisu)
+   * updated (wartość ma być automatycznie zmieniana podczas edycji).
+
+## Zadanie 4
+
+   1. Uzupełnij ręcznie dane w bazie, lub stwórz odpowiedni skrypt, który zostanie załadowany podczas startu aplikacji.
+   
+   2. Utwórz klasy `ArticleDao`, `AuthorDao`, `CategoryDao`.
+   3. W klasach Dao utwórz metody pozwalające na:
+
+   * zapis encji
+   * usuwanie encji
+   * edycję encji
