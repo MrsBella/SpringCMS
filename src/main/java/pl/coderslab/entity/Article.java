@@ -39,4 +39,9 @@ public class Article {
     public void setUpdatedTime() {
         this.updated = LocalDateTime.now();
     }
+
+    @Override
+    public String toString() {
+        return "Tytuł: " + title + ", data dodania: " + created + ", treść: " + content + "\n";
+    }
 }
