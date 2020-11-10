@@ -6,6 +6,8 @@ import pl.coderslab.entity.Author;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -25,5 +27,10 @@ public class AuthorDao {
 
     public void update(Author author) {
         entityManager.merge(author);
+    }
+
+    public List<Author> findAll() {
+        TypedQuery<Author> query = entityManager.createQuery("SELECT a FROM Author a", Author.class);
+        return query.getResultList();
     }
 }
