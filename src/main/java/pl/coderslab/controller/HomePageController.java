@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.dao.ArticleDao;
 import pl.coderslab.entity.Article;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Controller
