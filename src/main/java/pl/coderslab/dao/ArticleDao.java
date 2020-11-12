@@ -39,4 +39,9 @@ public class ArticleDao {
                 Article.class).setMaxResults(5);
         return query.getResultList();
     }
+
+    public Article findById(int id) {
+        Article article = entityManager.find(Article.class, id);
+        return article;
+    }
 }
