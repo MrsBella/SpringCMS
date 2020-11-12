@@ -33,4 +33,9 @@ public class AuthorDao {
         TypedQuery<Author> query = entityManager.createQuery("SELECT a FROM Author a", Author.class);
         return query.getResultList();
     }
+
+    public Author findById(int id) {
+        Author author = entityManager.find(Author.class, id);
+        return author;
+    }
 }
