@@ -2,7 +2,6 @@ package pl.coderslab.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pl.coderslab.entity.Author;
 import pl.coderslab.entity.Category;
 
 import javax.persistence.EntityManager;
@@ -34,4 +33,10 @@ public class CategoryDao {
         TypedQuery<Category> query = entityManager.createQuery("SELECT c FROM Category c", Category.class);
         return query.getResultList();
     }
+
+    public Category findByID(int id) {
+        Category category = entityManager.find(Category.class, id);
+        return category;
+    }
+
 }
